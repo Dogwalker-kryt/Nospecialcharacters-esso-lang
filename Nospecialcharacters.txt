@@ -1,0 +1,19 @@
+Name: Nospecialcharacters
+
+**Code**
+
+print("Hello world") 
+=
+print BRACKET QUOT Hello world QUOT BRACKET
+
+
+def main():
+=
+def main BRACKET BRACKET COLON
+
+
+if input == "yes":
+    notmain()
+=
+if input EQUAL EQUAL QUOT yes QUOT COLON
+    notmain BRACKET BRACKET
