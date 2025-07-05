@@ -2,7 +2,7 @@
 Basicly Python but with no special characters
 
 **about**
--Every Special character:
+-Every Special character
 -, . ; : ( ) / [ ] = ! - _ * + # ' and so on
 -is reaplaced with the name of the charakter in caps
 -so
