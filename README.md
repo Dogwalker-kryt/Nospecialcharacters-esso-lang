@@ -12,3 +12,5 @@ Basicly Python but with no special characters
 ## Still in Progress!
 - Compiler is finished it searches for main.nsc (nsc = no special character)
 - in the main.nsc file you can find the "Hello, World!" program
+**Compiler**
+- Still has many many issues
