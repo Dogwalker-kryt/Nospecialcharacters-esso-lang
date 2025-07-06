@@ -6,7 +6,7 @@ ASTNode* parse_progam();
 
 int main(int argc, char* argv[]) {
     if (argc < 2) {
-        printf("Usage: %s <main.esso>\n", argv[0]);
+        printf("Usage: %s <main.nsc>\n", argv[0]);
         return 1;
     }
     const char* filename = argv[1];
