@@ -9,4 +9,5 @@ Basicly Python but with no special characters
    "print("Hello world")"
 - is going to:
    "print BRACKET QUOT Hello world QUOT BRACKET"
-- Still in Progress!
+## Still in Progress!
+- Compiler is finished it searches for main.nsc (nsc = no special character)
