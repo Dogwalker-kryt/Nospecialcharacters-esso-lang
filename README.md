@@ -9,3 +9,4 @@ Basicly Python but with no special characters
 	print("Hello world") 
 	is going to
 	print BRACKET QUOT Hello world QUOT BRACKET
+**Still in Progress**
