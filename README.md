@@ -1,6 +1,6 @@
 # Nospecialcharacters-esso-lang
-Basicly Python but with no special characters
-in the lexer.c file you can see al names of all symbols
+- Basicly Python but with no special characters
+- in the lexer.c file you can see al names of all symbols
 
 **about**
 - Every Special character
