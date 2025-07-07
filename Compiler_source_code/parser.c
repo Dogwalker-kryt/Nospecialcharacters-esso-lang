@@ -75,8 +75,12 @@ ASTNode* parse_function() {
     return node;
 }
 
-
+/*
 ASTNode* parse_program() {
     static ASTNode dummy;
     return &dummy;
+}
+*/
+ASTNode* parse_program() {
+    return parse_function();  
 }
