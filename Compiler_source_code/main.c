@@ -5,7 +5,9 @@
 typedef struct ASTNode ASTNode;
 void generate_code(ASTNode* ast);
 
-ASTNode* parse_program(void);
+ASTNode* parse_program(); //{
+    //return parse_function();
+//}
 
 int main(int argc, char* argv[]) {
     if (argc < 2) {
@@ -20,7 +22,7 @@ int main(int argc, char* argv[]) {
         return 1;
     }
     printf("Parsing complete.\n");
-    TODO: generate_code(ast);
+    generate_code(ast);
     return 0;
 }
 
