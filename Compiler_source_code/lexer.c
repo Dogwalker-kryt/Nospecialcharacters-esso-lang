@@ -3,19 +3,6 @@
 #include <ctype.h>
 #include "lexer.h"
 
-typedef enum{
-    TOKEN_KEYOWORD,
-    TOKEN_IDENTIFIER,
-    TOKEN_SPECIAL,
-    TOKEN_NUMBER,
-    TOKEN_STRING
-} ToeknType;
-
-typedef struct {
-    ToeknType type;
-    char value[256];
-} Token;
-
 int is_special(const char* word) {
     return strcmp(word, "BRACKET") == 0 ||
            strcmp(word, "QUOT") == 0||
@@ -55,7 +42,7 @@ void classify_token(const char* word, Token* token) {
     strcpy(token->value, word);
 
     if (is_keyword(word)) {
-        token->type = TOKEN_KEYOWORD;
+        token->type = TOKEN_KEYWORD;
     } else if (is_special(word)) {
         token->type = TOKEN_SPECIAL;
     } else if (isdigit(word[0])) {
@@ -69,15 +56,15 @@ void classify_token(const char* word, Token* token) {
 
 void print_token(const Token* token) {
     const char* type_str =
-        token->type == TOKEN_KEYOWORD ? "KEYWORD" :
+        token->type == TOKEN_KEYWORD ? "KEYWORD" :
         token->type == TOKEN_SPECIAL ? "SPECIAL" :
         token->type == TOKEN_NUMBER ? "NUMBER" :
         token->type == TOKEN_STRING ? "STRING" : "IDENTIFIER";
-    printf("[%S: %S]\n", type_str, token->value);
+    printf("[%s: %s]\n", type_str, token->value);
 }
 
-int main() {
-    FILE* file = fopen("input.eeso", "r");
+int notmain() {
+    FILE* file = fopen("main.eeso", "r");
     if (!file) {
         perror("Failed to open file");
         return 1;
@@ -92,4 +79,23 @@ int main() {
 
     fclose(file);
     return 0;
+}
+
+Token tokens[256]; 
+
+Token* tokenize_file(const char* filename) {
+    FILE* file = fopen(filename, "r");
+    if (!file) {
+        perror("Failed to open file");
+        return NULL;
+    }
+
+    char word[256];
+    int i = 0;
+    while (fscanf(file, "%255s", word) == 1 && i < 1024) {
+        classify_token(word, &tokens[i++]);
+    }
+
+    fclose(file);
+    return tokens;
 }
