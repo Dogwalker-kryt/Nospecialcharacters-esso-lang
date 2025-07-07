@@ -18,5 +18,5 @@
 ## Compiler
 - Should work now
 - please if you dowloaded the compiler code before the July 7, 2025, then please update it with the new version!
-
+- i dont know how to use the compiler.elf
 
