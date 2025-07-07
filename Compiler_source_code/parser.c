@@ -1,7 +1,9 @@
 #include "ast.h"
 #include "lexer.h" 
+#include <string.h>
+#include <stdlib.h>
 
-Token* tokens;
+Token* token;
 int current = 0;
 
 Token* peek() {
@@ -54,7 +56,7 @@ ASTNode* parse_return() {
 
 ASTNode* parse_function() {
     match("def");
-    Token* name = advance(); // function name
+    Token* name = advance(); 
     match("LPAREN");
     Token* arg1 = advance();
     match("COMMA");
@@ -71,4 +73,10 @@ ASTNode* parse_function() {
     strcpy(node->function_def.arg2, arg2->value);
     node->function_def.body = return_stmt;
     return node;
+}
+
+
+ASTNode* parse_program() {
+    static ASTNode dummy;
+    return &dummy;
 }
