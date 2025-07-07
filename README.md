@@ -17,11 +17,27 @@
   
 ## Compiler
 - Should work now
-- please if you dowloaded the compiler code before the July 7, 2025, then please update it with the new version!
+-  if you dont want to compiler the compiler then skip to 'finished compiler'
+- please, if you dowloaded the compiler code before the July 7, 2025, then please update it with the new version!
+  
 **how to use**
+- if you want to complie the source code by hand then do this:
+```bash
+gcc -Wall -Wextra -g -c main.c -o main.o
+gcc -Wall -Wextra -g -c lexer.c -o lexer.o
+gcc -Wall -Wextra -g -c parser.c -o parser.o
+gcc -Wall -Wextra -g -c codegen.c -o codegen.o
+gcc -Wall -Wextra -g main.o lexer.o parser.o codegen.o -o compiler
+```
+- then you compile with this:
+```bash
+cc -O2 -Wall -Wextra main.o lexer.o parser.o codegen.o -o compiler
+```
+**finished compiler**
+- then you can do this:
 - write in the terminal
 ```bash
 ./compiler main.nsc
 ```
-- but i it still doesnt complie, i dont know
+- but i it still doesnt complie to python, i dont know
 - Still in development
