@@ -16,4 +16,7 @@
 - in the main.nsc file you can find the "Hello, World!" program
   
 ## Compiler
-- Still has many many issues
+- Should work now
+- please if you dowloaded the compiler code before the July 7, 2025, then please update it with the new version!
+
+
