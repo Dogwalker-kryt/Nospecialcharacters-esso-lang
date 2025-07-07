@@ -2,7 +2,10 @@
 #include "lexer.h"
 #include "ast.h"
 
-ASTNode* parse_progam();
+typedef struct ASTNode ASTNode;
+void generate_code(ASTNode* ast);
+
+ASTNode* parse_program(void);
 
 int main(int argc, char* argv[]) {
     if (argc < 2) {
@@ -20,3 +23,4 @@ int main(int argc, char* argv[]) {
     TODO: generate_code(ast);
     return 0;
 }
+
