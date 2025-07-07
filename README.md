@@ -18,5 +18,10 @@
 ## Compiler
 - Should work now
 - please if you dowloaded the compiler code before the July 7, 2025, then please update it with the new version!
-- i dont know how to use the compiler.elf
-
+**how to use**
+- write in the terminal
+```bash
+./compiler main.nsc
+```
+- but i it still doesnt complie, i dont know
+- Still in development
