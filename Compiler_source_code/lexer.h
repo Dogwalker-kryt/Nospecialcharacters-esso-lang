@@ -15,11 +15,13 @@ typedef struct {
     char value[256];
 } Token;
 
-#define MAX_TOKENS 1024
+#define MAX_TOKENS 256
 
 extern Token tokens[MAX_TOKENS];
 extern int token_count;
 
-void tokenize_file(const char* filename);
+Token* tokenize_file(const char* filename);
 
 #endif
+
+extern Token tokens[];
