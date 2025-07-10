@@ -31,7 +31,7 @@ gcc -Wall -Wextra -g main.o lexer.o parser.o codegen.o -o compiler
 ```
 - then you compile with this:
 ```bash
-cc -O2 -Wall -Wextra main.o lexer.o parser.o codegen.o -o compiler
+gcc -O2 -Wall -Wextra main.o lexer.o parser.o codegen.o -o compiler
 ```
 **finished compiler**
 - then you can do this:
